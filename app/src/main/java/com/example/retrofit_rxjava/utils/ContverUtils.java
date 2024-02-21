@@ -1,6 +1,8 @@
 package com.example.retrofit_rxjava.utils;
 
 import android.content.Context;
+import android.content.res.TypedArray;
+import android.util.TypedValue;
 
 public class ContverUtils {
 
@@ -8,7 +10,10 @@ public class ContverUtils {
         if (context == null) {
             return -1;
         }
-        return (int) (dp * context.getResources().getDisplayMetrics().density);
+
+        final float scale = context.getResources().getDisplayMetrics().density;
+            return (int) (dp * scale + 0.5f);
     }
+
 
 }

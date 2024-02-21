@@ -12,8 +12,14 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/broadcast" />
+            <option value="$PROJECT_DIR$/costumizeviewactivity" />
+            <option value="$PROJECT_DIR$/evenbus" />
+            <option value="$PROJECT_DIR$/eventbus" />
+            <option value="$PROJECT_DIR$/handler" />
             <option value="$PROJECT_DIR$/launchapp" />
             <option value="$PROJECT_DIR$/recycleview" />
+            <option value="$PROJECT_DIR$/service" />
           </set>
         </option>
       </GradleProjectSettings>

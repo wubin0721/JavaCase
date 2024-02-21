@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--name最好是自定义view的名字-->
+    <declare-styleable name="TextView">
+    <!--属性名称 name
+    格式  format
+    文字  string
+    颜色  color
+    宽高  dimension
+    资源  reference    drawrable
+    -->
+            <attr name="text" format="string" />
+            <attr name="textColor" format="color" />
+            <attr name="textSize" format="dimension" />
+            <attr name="background" format="reference" />
+
+    </declare-styleable>
+</resources>
