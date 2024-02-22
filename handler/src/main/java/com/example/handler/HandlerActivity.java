@@ -1,8 +1,9 @@
 package com.example.handler;
 
+
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
@@ -11,7 +12,9 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class HandlerActivity extends AppCompatActivity {
+import me.jessyan.autosize.internal.CustomAdapt;
+
+public class HandlerActivity extends AppCompatActivity implements CustomAdapt {
 
     private TextView mTextview;
     private String message;
@@ -24,11 +27,17 @@ public class HandlerActivity extends AppCompatActivity {
                 String data = (String)msg.obj;
                 mTextview.setText(data);
 
+
+
                 Toast.makeText(HandlerActivity.this,
                         "主线程收到消息啦！",Toast.LENGTH_SHORT).show();
             }
         }
     };
+
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +45,11 @@ public class HandlerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_handler);
 
         mTextview = this.findViewById(R.id.text);
+
+
     }
+
+
 
     public void start(View v){
 
@@ -84,5 +97,15 @@ public class HandlerActivity extends AppCompatActivity {
         reslut = stringBuilder.toString();
 
         return  reslut;
+    }
+
+    @Override
+    public boolean isBaseOnWidth() {
+        return false;
+    }
+
+    @Override
+    public float getSizeInDp() {
+        return 667;
     }
 }
