@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="borderRadius" format="dimension" />
+    <attr name="type">
+        <enum name="circle" value="0" />
+        <enum name="round" value="1" />
+    </attr>
+
+    <declare-styleable name="RoundImageView">
+        <attr name="borderRadius" />
+        <attr name="type" />
+    </declare-styleable>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+
+
+    <declare-styleable name="swipelistviewstyle">
+        <attr name="right_width" format="dimension" />
+    </declare-styleable>
+    <declare-styleable name="RoundProgressBar">
+        <attr name="roundColor" format="color" />
+        <attr name="roundProgressColor" format="color" />
+        <attr name="roundWidth" format="dimension" />
+        <attr name="textColor" format="color" />
+        <attr name="textSize" format="dimension" />
+        <attr name="max" format="integer" />
+        <attr name="textIsDisplayable" format="boolean" />
+        <attr name="style">
+            <enum name="STROKE" value="0" />
+            <enum name="FILL" value="1" />
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="my_loopview">
+        <attr name="itemsVisible" format="integer" />
+    </declare-styleable>
+
+
+    <attr name="todayLineColor" format="color" />
+    <attr name="todayFillColor" format="color" />
+    <attr name="yesterdayLineColor" format="color" />
+    <attr name="yesterdayFillColor" format="color" />
+    <attr name="bottomTextColor" format="color" />
+    <attr name="timeValueColor" format="color" />
+    <attr name="todayValueColor" format="color" />
+    <attr name="yesterdayValueColor" format="color" />
+    <attr name="customerValueSize" format="dimension" />
+    <attr name="bottomTextSize" format="dimension" />
+    <attr name="lineBetween" format="dimension" />
+    <attr name="textAndChartBetween" format="dimension" />
+    <attr name="staticLineStrokeWidth" format="dimension" />
+    <attr name="todayLineStrokeWidth" format="dimension" />
+    <attr name="yesterdayLineStrokeWidth" format="dimension" />
+    <attr name="rodLineStrokeWidth" format="dimension" />
+    <attr name="rodColor" format="color" />
+
+
+    <declare-styleable name="CustomChart">
+        <attr name="todayLineColor" />  <!--今日线的颜色-->
+        <attr name="todayFillColor" />  <!--今日填充的颜色-->
+        <attr name="yesterdayLineColor" />  <!--昨日线的颜色-->
+        <attr name="yesterdayFillColor" />  <!--昨日填充的颜色-->
+        <attr name="bottomTextColor" />   <!--底部文字的颜色-->
+        <attr name="timeValueColor" />    <!--矩形中时间的颜色-->
+        <attr name="todayValueColor" />    <!--矩形中今日数据的颜色-->
+        <attr name="yesterdayValueColor" />   <!--矩形中昨日数据的颜色-->
+        <attr name="customerValueSize" />     <!--矩形中数据的大小-->
+        <attr name="bottomTextSize" />    <!--底部文字的大小-->
+        <attr name="lineBetween" />    <!--每条静态的线之间的距离-->
+        <attr name="textAndChartBetween" /> <!--底部文字和图表之间的间隔-->
+        <attr name="staticLineStrokeWidth" />  <!--静态线的宽度-->
+        <attr name="todayLineStrokeWidth" />  <!--今日线的宽度-->
+        <attr name="yesterdayLineStrokeWidth" />  <!--昨日线的宽度-->
+        <attr name="rodLineStrokeWidth" />  <!--杆的宽度-->
+        <attr name="rodColor" />  <!--杆的颜色-->
+
+    </declare-styleable>
+
+    <declare-styleable name="RatingBar">
+        <!--尺寸值-->
+        <attr name="starImageSize" format="dimension" />
+        <!--星星间距-->
+        <attr name="starPadding" format="dimension" />
+        <!--星星总数-->
+        <attr name="starCount" format="integer" />
+        <!--空白的星星资源文件值-->
+        <attr name="starEmpty" format="reference" />
+        <!--满星资源文件值-->
+        <attr name="starFill" format="reference" />
+        <!--半星资源文件值-->
+        <attr name="starHalf" format="reference" />
+        <!--是否可点击boolean值-->
+        <attr name="clickable" format="boolean" />
+        <!--当前进度float值-->
+        <attr name="starStep" format="float" />
+        <!--每次进度方式的值，整星还是半星-->
+        <attr name="stepSize">
+            <enum name="Half" value="0" />
+            <enum name="Full" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="StepsViewIndicator">
+        <attr name="numOfSteps" format="integer" />
+        <attr name="noSelectedColor" format="color" />
+        <attr name="selectedColor" format="color" />
+    </declare-styleable>
+    <!--自定义水平进度条-->
+    <declare-styleable name="ZzHorizontalProgressBar">
+        <attr name="zpb_padding" format="dimension" />
+        <attr name="zpb_bg_color" format="color|reference" />
+        <attr name="zpb_pb_color" format="color|reference" />
+        <attr name="zpb_max" format="integer" />
+        <attr name="zpb_progress" format="integer" />
+    </declare-styleable>
+
+    <attr name="direction">
+        <enum name="rightToLeft" value="0" />
+        <enum name="bottomToTop" value="1" />
+        <enum name="leftToRight" value="2" />
+        <enum name="topToBottom" value="3" />
+    </attr>
+
+    <declare-styleable name="MultiDirectionSlidingDrawer">
+        <attr name="handle" format="reference" />
+        <attr name="content" format="reference" />
+        <attr name="direction" />
+        <attr name="bottomOffset" format="dimension" />
+        <attr name="topOffset" format="dimension" />
+        <attr name="allowSingleTap" format="boolean" />
+        <attr name="animateOnClick" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="roundedimageview">
+        <attr name="border_thickness" format="dimension" />
+        <attr name="border_inside_color" format="color" />
+        <attr name="border_outside_color" format="color"></attr>
+    </declare-styleable>
+
+    <!--涟漪控件属性-->
+    <declare-styleable name="mRippleView">
+        <attr name="cColor" format="color" />
+        <attr name="cSpeed" format="integer" />
+        <attr name="cDensity" format="integer" />
+        <attr name="cIsFill" format="boolean" />
+        <attr name="cIsAlpha" format="boolean" />
+    </declare-styleable>
+
+    <!--抽屉控件2.0-->
+    <declare-styleable name="ScrollLayout">
+
+        <attr name="minOffset" format="dimension" />
+
+        <attr name="maxOffset" format="dimension" />
+
+        <attr name="exitOffset" format="dimension" />
+
+        <attr name="mode">
+            <flag name="open" value="0x0" />
+            <flag name="close" value="0x1" />
+            <flag name="exit" value="0x2" />
+        </attr>
+
+        <attr name="allowHorizontalScroll" format="boolean" />
+
+        <attr name="isSupportExit" format="boolean" />
+
+    </declare-styleable>
+
+
+    <declare-styleable name="RatioLayout">
+    <attr name="picRatio" format="float"/>
+    <attr name="relative">
+    <enum name="width" value="0"/>
+    <enum name="height" value="1"/>
+    </attr>
+</declare-styleable>
+
+</resources>

@@ -4,12 +4,67 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-  <com.example.costumizeviewactivity.View.TextView
+<!--  <com.example.costumizeviewactivity.View.CusmizeTextView-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="match_parent"-->
+<!--      app:text="hello"-->
+<!--      app:textColor="@color/black"-->
+<!--      app:textSize="15sp"-->
+<!--      />-->
+
+  <TextView
+      android:id="@+id/letter_tv"
       android:layout_width="wrap_content"
-      android:layout_height="match_parent"
-      app:text="hello"
-      app:textColor="@color/black"
-      app:textSize="15sp"
+      android:layout_height="wrap_content"
+      android:text="A"
+      android:layout_centerInParent="true"
+      android:textSize="16sp"
+      android:textColor="#ff0000"
+      android:visibility="gone"
       />
+
+  <com.example.costumizeviewactivity.View.LetterSideBar
+      android:id="@+id/letterbar"
+      android:layout_width="wrap_content"
+      android:paddingLeft="10dp"
+      android:paddingRight="10dp"
+      android:layout_height="match_parent"
+      android:layout_alignParentRight="true"
+      />
+
+  <com.shuhart.stepview.StepView
+      android:id="@+id/step_view"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:padding="16dp"
+      app:sv_stepLineWidth="1dp"
+      app:sv_stepPadding="4dp"
+      app:sv_doneCircleRadius="12dp"
+      app:sv_selectedCircleRadius="12dp"
+      app:sv_stepViewStyle="@style/StepView"
+      app:sv_stepNumberTextSize="12sp"
+      app:sv_animationType="Line"
+      app:sv_nextStepLineColor="@color/line"
+      />
+
+
+  <com.example.costumizeviewactivity.View.StepsView
+      android:id="@+id/step_view2"
+      android:layout_width="wrap_content"
+      android:layout_height="40dp"
+      android:layout_centerInParent="true"
+      android:padding="10dp"
+      />
+
+
+
+
+<!--  <com.example.costumizeviewactivity.View.CircleImageView-->
+<!--      android:layout_width="96dp"-->
+<!--      android:layout_height="96dp"-->
+<!--      android:src="@drawable/icon_pay"-->
+<!--      android:layout_alignParentBottom="true"-->
+<!--      />-->
+
 
 </RelativeLayout>

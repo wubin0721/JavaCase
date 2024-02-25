@@ -16,7 +16,7 @@ import androidx.annotation.Nullable;
 import com.example.costumizeviewactivity.R;
 
 
-public class TextView extends View {
+public class CusmizeTextView extends View {
 
     private String mText="";
     private int mTextColor;
@@ -25,24 +25,24 @@ public class TextView extends View {
     private Paint paint = new Paint();
 
     //在new的时候调用
-    public TextView(Context context) {
+    public CusmizeTextView(Context context) {
         super(context);
     }
 
     //在布局layout中使用
-    public TextView(Context context, @Nullable AttributeSet attrs) {
+    public CusmizeTextView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
     }
 
     //在布局layout中使用，但是会有style
-    public TextView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
+    public CusmizeTextView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
         //获取自定义属性
-        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.TextView);
-        mText = array.getString(R.styleable.TextView_text);
-        mTextColor = array.getColor(R.styleable.TextView_textColor,mTextColor);
-        mTextSize = array.getDimensionPixelSize(R.styleable.TextView_textSize,spToPx(mTextSize));
+        TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.CusmizeTextView);
+        mText = array.getString(R.styleable.CusmizeTextView_text);
+        mTextColor = array.getColor(R.styleable.CusmizeTextView_textColor,mTextColor);
+        mTextSize = array.getDimensionPixelSize(R.styleable.CusmizeTextView_textSize,spToPx(mTextSize));
 
         //回收
         array.recycle();
@@ -51,7 +51,7 @@ public class TextView extends View {
         paint.setColor(mTextColor);
     }
 
-    private int spToPx( int sp) {
+    private int spToPx(int sp) {
         return (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP,sp,
                 getResources().getDisplayMetrics());
 

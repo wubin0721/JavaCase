@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!--name最好是自定义view的名字-->
-    <declare-styleable name="TextView">
+    <declare-styleable name="CusmizeTextView">
     <!--属性名称 name
     格式  format
     文字  string
@@ -15,4 +15,20 @@
             <attr name="background" format="reference" />
 
     </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension" />
+        <attr name="border_color" format="color" />
+        <attr name="border_overlay" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="StepsViewIndicator">
+        <attr name="numOfSteps" format="integer" />
+        <attr name="noSelectedColor" format="color" />
+        <attr name="selectedColor" format="color" />
+    </declare-styleable>
+
+
+
+
 </resources>

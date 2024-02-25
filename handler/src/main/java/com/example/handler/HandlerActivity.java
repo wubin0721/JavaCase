@@ -9,6 +9,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.view.View;
+import android.widget.RatingBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -19,6 +20,8 @@ public class HandlerActivity extends AppCompatActivity implements CustomAdapt {
     private TextView mTextview;
     private String message;
 
+    private RatingBar ratingBar;
+
     private Handler mHandler = new Handler(Looper.getMainLooper()){
         @Override
         public void handleMessage(@NonNull Message msg) {
@@ -26,8 +29,6 @@ public class HandlerActivity extends AppCompatActivity implements CustomAdapt {
             if(msg.what == 0){
                 String data = (String)msg.obj;
                 mTextview.setText(data);
-
-
 
                 Toast.makeText(HandlerActivity.this,
                         "主线程收到消息啦！",Toast.LENGTH_SHORT).show();
@@ -46,7 +47,18 @@ public class HandlerActivity extends AppCompatActivity implements CustomAdapt {
 
         mTextview = this.findViewById(R.id.text);
 
-
+        //评分条
+        ratingBar=findViewById(R.id.rating_bar);
+        ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
+            @Override
+            public void onRatingChanged(RatingBar ratingBar, float v, boolean b) {
+                float point=(int) ((v/ratingBar.getNumStars())*100);
+                //String.valueOf(float f) : 将 float 变量 f 转换成字符串
+                Toast.makeText(HandlerActivity.this,
+                        "您的满意度为："+String.valueOf(point)
+                                +"%",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
 
