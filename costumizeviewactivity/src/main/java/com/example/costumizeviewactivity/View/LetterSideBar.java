@@ -65,6 +65,8 @@ public class LetterSideBar extends View {
         setMeasuredDimension(width,height);
     }
 
+
+    //手势监测
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         switch (event.getAction()){
