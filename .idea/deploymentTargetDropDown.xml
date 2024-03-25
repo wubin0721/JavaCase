@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="deploymentTargetDropDown">
-    <targetSelectedWithDropDown>
-      <Target>
-        <type value="QUICK_BOOT_TARGET" />
-        <deviceKey>
-          <Key>
-            <type value="VIRTUAL_DEVICE_PATH" />
-            <value value="C:\Users\wubin\.android\avd\iphone_API_30.avd" />
-          </Key>
-        </deviceKey>
-      </Target>
-    </targetSelectedWithDropDown>
-    <timeTargetWasSelectedWithDropDown value="2024-02-25T06:02:42.221566500Z" />
+    <value>
+      <entry key="app">
+        <State />
+      </entry>
+      <entry key="evenbus">
+        <State />
+      </entry>
+      <entry key="handler">
+        <State />
+      </entry>
+      <entry key="launchapp">
+        <State />
+      </entry>
+    </value>
   </component>
 </project>

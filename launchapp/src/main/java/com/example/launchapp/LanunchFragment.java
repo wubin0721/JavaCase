@@ -1,6 +1,7 @@
 package com.example.launchapp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -20,6 +21,8 @@ import android.widget.RadioGroup;
  */
 public class LanunchFragment extends Fragment {
 
+    private Context context;
+
     public static LanunchFragment newInstance(int count,int position, int imageId) {
         LanunchFragment fragment = new LanunchFragment();
         Bundle args = new Bundle();
@@ -34,7 +37,7 @@ public class LanunchFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        Context context = getContext();
+        context = getContext();
         Bundle arguments = getArguments();
         int count = arguments.getInt("count",0);
         int position = arguments.getInt("position",0);
@@ -63,6 +66,8 @@ public class LanunchFragment extends Fragment {
             btn_start.setVisibility(View.VISIBLE);
             btn_start.setOnClickListener(v->{
                     //进入主界面
+                Intent intent = new Intent(context, MainActivity.class);
+                startActivity(intent);
             });
         }
 
