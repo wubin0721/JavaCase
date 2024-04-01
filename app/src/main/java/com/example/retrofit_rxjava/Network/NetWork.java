@@ -22,6 +22,8 @@ import retrofit2.converter.scalars.ScalarsConverterFactory;
 @Module
 public class NetWork{
 
+
+    //先封装OkHttp
     @Singleton
     @Provides
     OkHttpClient provideOkHttpClient(){
@@ -37,6 +39,8 @@ public class NetWork{
                 .build();
     }
 
+
+    //再封装Retrofit，OkHttpClient作为参数
     @Singleton
     @Provides
     Retrofit provideRetrofit(OkHttpClient client){
@@ -44,11 +48,13 @@ public class NetWork{
                 .baseUrl("http://192.168.18.43:8080")       //服务器地址
                 .client(client)
 //                .addConverterFactory(ScalarsConverterFactory.create())
-                .addConverterFactory(GsonConverterFactory.create())
-                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())         //Gson解析
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())  //Rxjava
                 .build();
     }
 
+
+    //最后在ApiService封装post/get请求，Retrofit作为参数
     @Singleton
     @Provides
     ApiService provideApiService(Retrofit retrofit){

@@ -24,7 +24,7 @@ public interface ApiService {
     Call<ResponseData<String>> Post(@Body User user);
 
 
-    //Post请求
+    //RxPost请求
     @POST("fc/test")                 //路径
     @FormUrlEncoded
     Observable<ResponseData<String>> RxPost(@Field("test")String str);

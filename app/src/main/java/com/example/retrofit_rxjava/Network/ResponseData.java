@@ -3,7 +3,16 @@ package com.example.retrofit_rxjava.Network;
 import com.example.retrofit_rxjava.Network.response.IResponse;
 
 public class ResponseData <T> implements IResponse<T> {
+
+    //返回值
     private String code;
+
+    //应答体数据
+    private T data;
+
+    //错误信息
+    private String msg;
+
 
     public String getCode() {
         return code;
@@ -18,14 +27,6 @@ public class ResponseData <T> implements IResponse<T> {
         this.code = code;
     }
 
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-
     public T getData() {
         return data;
     }
@@ -34,6 +35,15 @@ public class ResponseData <T> implements IResponse<T> {
         this.data = data;
     }
 
-    private String msg;
-    private T data;
+    public String getMsg() {
+        return msg;
+    }
+
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
+
+
+
+
 }
