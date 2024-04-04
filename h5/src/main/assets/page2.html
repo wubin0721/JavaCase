@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>获取按钮的 ID 示例</title>
+    <style>
+        body, html {
+          height: 100%;
+          margin: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <button id="button1" type="button" onclick="jumpToPage()">按钮1</button>
+    <button id="button2" type="button" onclick="jumpToPage()">按钮2</button>
+    <button id="button3" type="button" onclick="jumpToPage()">按钮3</button>
+
+    <script>
+        function jumpToPage() {
+            window.location.href = 'android.html';
+        }
+    </script>
+
+<!--    <script>-->
+<!--        const currntUrl = window.location.href;-->
+<!--        const buttons = document.querySelectorAll("button");-->
+<!--        buttons.forEach(button => {-->
+<!--            button.addEventListener("click", () => {-->
+<!--                Android.getButtonId(button.id,currntUrl)-->
+<!--            });-->
+<!--        });-->
+<!--    </script>-->
+
+
+</body>
+
+</html>

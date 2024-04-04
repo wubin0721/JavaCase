@@ -10,16 +10,25 @@ public class WebAppInterface {
 
         private String buttonId;
 
-        WebAppInterface(Context c) {
-            this.mContext = c;
+        private String url;
+
+        WebAppInterface(Context activity) {
+            this.mContext = activity;
         }
 
         //此处与注入H5的函数名称必须一致
         @JavascriptInterface
-        public void getButtonId(String buttonId) {
-            this.buttonId = buttonId;
+        public void getButtonId(String buttonId,String url) {
             //获取到 H5里面的Button的 id
-            Log.d("Button ID", buttonId);
+            this.buttonId = buttonId;
+            //获取当前 H5里面的页面的url地址
+            this.url = url;
+            print();
+        }
+
+        private void print(){
+            Log.d("Button ID", "Button ID :"+buttonId);
+            Log.d("Button ID", "CurrentUrl :"+url);
         }
 
 }
