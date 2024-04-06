@@ -71,7 +71,7 @@ public class MessagingService extends FirebaseMessagingService {
 //        PendingIntent pendingIntent = stackBuilder.getPendingIntent(0,
 //                PendingIntent.FLAG_UPDATE_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 
-        // 构建Uri
+        // 构建Uri ，对应AndroidManifest中的 <data>标签
         Uri deepLinkUri = Uri.parse("myapp://example.com/deeplink");
         // 创建Intent
         Intent intent = new Intent(Intent.ACTION_VIEW, deepLinkUri);

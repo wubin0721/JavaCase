@@ -1,0 +1,30 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color white
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+id MyRecycleView
+id a
+id b
+id btnConfirm
+id btnSend
+id code
+id etc
+id item_image
+id item_title
+id loading
+id plus
+id reflesh_layout
+id reloading
+id target
+layout activity_constraint_layout
+layout activity_main
+layout activity_smsactivity
+layout item_list_loader
+layout item_list_view
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+style Base.Theme.Retrofit_RxJava
+style Theme.Retrofit_RxJava
