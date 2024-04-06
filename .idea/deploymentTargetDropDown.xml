@@ -5,6 +5,15 @@
       <entry key="app">
         <State />
       </entry>
+      <entry key="broadcast">
+        <State />
+      </entry>
+      <entry key="costumizelisneractivity">
+        <State />
+      </entry>
+      <entry key="costumizeviewactivity">
+        <State />
+      </entry>
       <entry key="evenbus">
         <State />
       </entry>
@@ -21,6 +30,9 @@
         <State />
       </entry>
       <entry key="mvp_demo">
+        <State />
+      </entry>
+      <entry key="service">
         <State />
       </entry>
     </value>
