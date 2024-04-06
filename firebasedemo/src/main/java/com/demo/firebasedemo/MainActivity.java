@@ -32,6 +32,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         firebaseInit();
+
+//        Intent intent = new Intent(this, SecondActivity.class);
+//        startActivity(intent);
+//        overridePendingTransition(R.anim.anim_slide_right_in, R.anim.anim_slide_left_out);
+//        finish();
     }
 
     private void  firebaseInit(){
