@@ -2,27 +2,35 @@ package com.demo.costimizedialog;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MyDialog{
     private Dialog dialog;
-    public TextView ok;
-    public TextView cancel;
+    private TextView ok,cancel;
+
+    private ImageView close;
 
     private Context context;
     public MyDialog(Context context) {
         this.context = context;
-//        View view = LayoutInflater.from(context).inflate(R.layout.dialog_costumize, null);
-        View view = LayoutInflater.from(context).inflate(R.layout.dialog_linearlayout, null);
-
-        dialog = new Dialog(context);
+        View view = LayoutInflater.from(context).inflate(R.layout.dialog_costumize, null);
+        dialog = new Dialog(context,R.style.customDialog);
         dialog.setCancelable(true);
         dialog.setContentView(view);
         ok = view.findViewById(R.id.ok);
         cancel = view.findViewById(R.id.cancel);
+        close = view.findViewById(R.id.close);
+        WindowManager.LayoutParams lp = dialog.getWindow().getAttributes();
+        // 设置背景层透明度
+        lp.dimAmount = 0.4f;
+        dialog.getWindow().setAttributes(lp);
+
 
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +44,12 @@ public class MyDialog{
                         cancel();
             }
         });
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                cancel();
+            }
+        });
     }
     public void show(){
         if(dialog != null){
@@ -47,4 +61,6 @@ public class MyDialog{
             dialog.dismiss();
         }
     }
+
+
 }
