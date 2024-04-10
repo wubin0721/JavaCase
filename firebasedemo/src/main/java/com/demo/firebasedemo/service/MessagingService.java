@@ -47,8 +47,7 @@ public class MessagingService extends FirebaseMessagingService {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
             //创建通知渠道
-            NotificationChannel channel = new NotificationChannel(
-                    context.getPackageName(), "MyChannel",
+            NotificationChannel channel = new NotificationChannel("channel_id", "channel_name",
                     NotificationManager.IMPORTANCE_DEFAULT);
             NotificationManager notificationManager = getSystemService(NotificationManager.class);
             notificationManager.createNotificationChannel(channel);
@@ -60,8 +59,7 @@ public class MessagingService extends FirebaseMessagingService {
         Log.d(TAG, "content: "+content);
 
         // 在服务或后台任务中创建通知
-        NotificationManager notificationManager =
-                (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
 
 
         // 创建一个Intent指向你想要启动的Activity
