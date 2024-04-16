@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ShortCut</string>
+    <string name="app_test_0">图标一</string>
+    <string name="app_test_1">图标二</string>
+</resources>
