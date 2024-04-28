@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Retrofit_RxJava">
         <activity
+            android:name=".room.RoomActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
